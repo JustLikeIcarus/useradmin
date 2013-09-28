@@ -5,7 +5,7 @@ This module gives a simple but complete user authentication solution. Your users
 view their profile details and change them, as well as request password-reset links via email.
 A user with admin role can administer users, create, edit and delete them on the admin page.
 
-**NEW: Upgraded to support Kohana 3.2.x!**
+**NEW: Upgraded to support Kohana 3.3.x!**
 
 ### INSTALLATION NOTES ###
 **Database:** Use the schema.sql to create all needed tables in your database,
