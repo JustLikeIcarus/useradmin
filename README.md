@@ -25,12 +25,12 @@ make the useradmin config available to the Auth class.
 		...
 	));
 
-For the pagination module I had success with the 3.2/devel branch of Shadowhands github repo here: <https://github.com/shadowhand/pagination/tree/3.2/develop>, the default 3.1/master branch didn't work.
+For the pagination module Shadowhands 3.3/master repo here: <https://github.com/shadowhand/pagination/tree/3.3/master>, the default 3.1/master branch doesn't work.
 If you are using submodules the following can be used (and don't forget adding it to Kohana modules afterwards) to checkout the needed branch:
 
 	git submodule add git://github.com/shadowhand/pagination.git modules/pagination
 	cd modules/pagination
-	git checkout -b 3.2/develop origin/3.2/develop
+	git checkout -b 3.3/master origin/3.3/master
 	cd ../..
 	git submodule init && git submodule update
 
@@ -58,13 +58,9 @@ you language is not supported yet.
 
 **Email**
 
-For the email module I had success with the 3.2/devel branch of Shadowhands github repo here: <https://github.com/shadowhand/email/tree/3.2/develop>,
-If you are using submodules the following can be used (and don't forget adding it to Kohana modules afterwards) to checkout the 3.2 branch:
+For the email module the default 3.3/master branch of Shadowhands github repo here: <https://github.com/shadowhand/email/tree/3.3/master>,
 
 	git submodule add git://github.com/shadowhand/email.git modules/email
-	cd modules/email
-	git checkout -b 3.2/develop origin/3.2/develop
-	cd ../..
 	git submodule init && git submodule update
 
 Be sure to set the correct email options in the email.php config file as well as the email options in the useradmin.php config file.
@@ -110,6 +106,9 @@ I would like to thank:
 * [gartz](https://github.com/gartz/useradmin/) for doing upgrading the module to support Kohana 3.1.x.
 
 ### CHANGELOG ###
+Sep 26th 2013
+
+* Upgraded for Kohana 3.3
 
 Jan 29th 2011:
 
