@@ -542,7 +542,7 @@ class UserTests extends Unittest_Model_TestCase {
 	}
 	
 	/**
-	 * test auth delete logged user
+	 * test auth delete loged user
 	 * @author Gabriel Giannattasio
 	 * @test
 	 */
