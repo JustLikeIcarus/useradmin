@@ -60,7 +60,7 @@ class Useradmin_Controller_User extends Controller_App {
 				'params.controller',
 				false
 				);
-			if($referrerController && $referrerController != 'user' && !Session::instance()->get('noReturn',false)){
+			if($referrerController && $referrerController != 'User' && !Session::instance()->get('noReturn',false)){
 				Session::instance()->set('returnUrl',$this->request->referrer());
 			}
 		}
