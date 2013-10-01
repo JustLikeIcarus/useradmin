@@ -30,46 +30,46 @@ class Useradmin_Helper_Format {
 		}
 		if ($time < 0)
 		{
-			return __('never');
+			return I18n::get('never');
 		}
 		$delta = time() - $time;
 		if ($delta < 1 * MINUTE)
 		{
-			return $delta == 1 ? __("one.second.ago") : $delta . ' ' . __("seconds.ago");
+			return $delta == 1 ? I18n::get("one.second.ago") : $delta . ' ' . I18n::get("seconds.ago");
 		}
 		if ($delta < 2 * MINUTE)
 		{
-			return __("one.minute.ago");
+			return I18n::get("one.minute.ago");
 		}
 		if ($delta < 45 * MINUTE)
 		{
-			return floor($delta / MINUTE) . ' ' . __("minutes.ago");
+			return floor($delta / MINUTE) . ' ' . I18n::get("minutes.ago");
 		}
 		if ($delta < 90 * MINUTE)
 		{
-			return __("one.hour.ago");
+			return I18n::get("one.hour.ago");
 		}
 		if ($delta < 24 * HOUR)
 		{
-			return floor($delta / HOUR) . ' ' . __("hours.ago");
+			return floor($delta / HOUR) . ' ' . I18n::get("hours.ago");
 		}
 		if ($delta < 48 * HOUR)
 		{
-			return __("yesterday");
+			return I18n::get("yesterday");
 		}
 		if ($delta < 30 * DAY)
 		{
-			return floor($delta / DAY) . ' ' . __("days.ago");
+			return floor($delta / DAY) . ' ' . I18n::get("days.ago");
 		}
 		if ($delta < 12 * MONTH)
 		{
 			$months = floor($delta / DAY / 30);
-			return $months <= 1 ? __("one.month.ago") : $months . ' ' . __("months.ago");
+			return $months <= 1 ? I18n::get("one.month.ago") : $months . ' ' . I18n::get("months.ago");
 		}
 		else
 		{
 			$years = floor($delta / DAY / 365);
-			return $years <= 1 ? __("one.year.ago") : $years . ' '. __("years.ago");
+			return $years <= 1 ? I18n::get("one.year.ago") : $years . ' '. I18n::get("years.ago");
 		}
 	}
 
@@ -82,7 +82,7 @@ class Useradmin_Helper_Format {
 	{
 		if (( $value == '0000-00-00 00:00:00' ) || ( $value == '0000-00-00' ))
 		{
-			return __('never');
+			return I18n::get('never');
 		}
 		$date = date_parse($value); // req. PHP >= 5.2.0
 		$now = getdate();
@@ -110,7 +110,7 @@ class Useradmin_Helper_Format {
 	{
 		if (( $value == '0000-00-00 00:00:00' ) || ( $value == '0000-00-00' ))
 		{
-			return __('never');
+			return I18n::get('never');
 		}
 		return date('m/d/Y', strtotime($value));
 	}
